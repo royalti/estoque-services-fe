@@ -1,5 +1,5 @@
 {
-  "name": "Estoque-Services Layout",
+  "name": "estoqueservices",
   "version": "1.0.0",
   "description": "Layout para aplicação de listagem das ordens de serviço",
   "main": "gulpfile.js",

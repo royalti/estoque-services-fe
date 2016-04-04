@@ -1,5 +1,5 @@
 {
-  "name": "radicalnanet",
+  "name": "Estoque-Services Layout",
   "authors": [
     "José Anchieta dos Santos Júnior <santosjr87@gmail.com>"
   ],
@@ -18,6 +18,6 @@
   ],
   "dependencies": {
     "jquery": "~2.2.0",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "v4.0.0-alpha.2"
   }
 }

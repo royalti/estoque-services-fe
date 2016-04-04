@@ -1,3 +1,14 @@
 @import 'base';
 @import 'tipography';
 
+.no-p-no-m {
+	margin: 0;
+	padding: 0;
+}
+.card-title {
+	background-color: #666;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: #fff;
+	margin-bottom: 0;
+}
