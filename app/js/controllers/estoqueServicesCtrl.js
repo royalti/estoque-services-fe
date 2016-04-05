@@ -13,28 +13,28 @@ angular.module("estoqueServices").controller("estoqueServicesCtrl", function ($s
     $scope.abertas = 0;
     $scope.fechadas = 0;
     var carregarOrdensDeServico = function () {
-        $http.get("http://192.168.0.101:3000/api/ordemservico").success(function (data, status){
+        $http.get("/api/ordemservico").success(function (data, status){
             $scope.ordensDeServico = data;
         }).error(function (data, status){
             $scope.message = "Aconteceu um erro: " + status;
         });
     };
     var carregarEmExecucao = function () {
-        $http.get("http://192.168.0.101:3000/api/execucao").success(function (data, status){
+        $http.get("/api/execucao").success(function (data, status){
             $scope.osEmExecucao = data;
         }).error(function (data, status){
             $scope.message = "Aconteceu um erro: " + status;
         });
     };
     var carregarAbertas = function () {
-        $http.get("http://192.168.0.101:3000/api/abertas").success(function (data, status){
+        $http.get("/api/abertas").success(function (data, status){
             $scope.abertas = data;
         }).error(function (data, status){
             $scope.message = "Aconteceu um erro: " + status;
         });
     };
     var carregarFechadas = function () {
-        $http.get("http://192.168.0.101:3000/api/fechadas").success(function (data, status){
+        $http.get("/api/fechadas").success(function (data, status){
             $scope.fechadas = data;
         }).error(function (data, status){
             $scope.message = "Aconteceu um erro: " + status;
