@@ -3,9 +3,8 @@
 // // //////////////////////////////////////////////
 
 var config = {
-	jsConcatFiles: [ 
-		'./app/js/main.js'
-	], 
+	jsConcatFiles: [
+	],
 	buildFilesFoldersRemove:[
 		'build/scss/', 
 		'build/js/!(*.min.js)',

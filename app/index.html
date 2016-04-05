@@ -1,54 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="estoqueServices">
 <head>
 	<title>Estoque Services</title>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
+<body ng-controller="estoqueServicesCtrl">
 
 <div class="row no-p-no-m">
 	<div class="col-md-3">
 
         <div class="card text-xs-center password-of-day">
-            <h1 style="font-family: 'Arial Black';">1908</h1>
+            <h1 style="font-family: 'Arial Black';">{{ senha }}</h1>
         </div>
 
+
         <ul class="list-group">
-            <li class="list-group-item execucao">
-                <span class="label label-success label-pill pull-xs-right">278</span>
-                Natan
+            <li class="list-group-item execucao" ng-repeat="ordem in osEmExecucao" >
+                <span class="label label-success label-pill pull-xs-right">{{ordem.id}}</span>
+                {{ordem.tecnico.nome.split(' ')[0]}}
             </li>
-            <li class="list-group-item execucao">
-                <span class="label label-success label-pill pull-xs-right">278</span>
-                Natan
-            </li>
-            <li class="list-group-item execucao">
-                <span class="label label-success label-pill pull-xs-right">290</span>
-                Victor
-            </li>
-            <li class="list-group-item execucao">
-                <span class="label label-success label-pill pull-xs-right">290</span>
-                Victor
-            </li>
-            <li class="list-group-item execucao">
-                <span class="label label-success label-pill pull-xs-right">301</span>
-                Marcus
-            </li>
-            <li class="list-group-item execucao">
-                <span class="label label-success label-pill pull-xs-right">301</span>
-                Marcus
-            </li>
+
         </ul>
 
         <div class="card text-xs-center" style="margin-top: 13px;">
             <ul class="list-group list-group-flush">
 
                 <li class="list-group-item">
-                    <h4>Abertas: 289</h4>
+                    <h4>Abertas: {{abertas}}</h4>
                 </li>
                 <li class="list-group-item">
-                    <h4>Fechadas: 239</h4>
+                    <h4>Fechadas: {{fechadas}}</h4>
                 </li>
             </ul>
         </div>
@@ -56,129 +39,17 @@
     <div class="col-md-9" style="padding: 0;">
         <div class="row no-gutter">
 
-            <div class="col-md-3 col-xs-12">
+            <div class="col-md-3 col-xs-12" ng-repeat="os in ordensDeServico">
                 <div class="card text-xs-center">
                     <ul class="list-group list-group-flush">
 
-                        <h3 class="card-title">287</h3>
+                        <h3 class="card-title">{{os.id}}</h3>
 
-                        <li class="list-group-item">
-                            <h4>DiModa</h4>
+                        <li class="list-group-item" style="height: 70px;">
+                            <h4 class="cliente">{{ os.cliente.nome | limitTo: 30 }}</h4>
                         </li>
-                        <li class="list-group-item">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-xs-12">
-                <div class="card text-xs-center">
-                    <ul class="list-group list-group-flush">
-
-                        <h3 class="card-title">287</h3>
-
-                        <li class="list-group-item">
-                            <h4>Supermercado Santana</h4>
-                        </li>
-                        <li class="list-group-item">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-xs-12">
-                <div class="card text-xs-center">
-                    <ul class="list-group list-group-flush">
-
-                        <h3 class="card-title">287</h3>
-
-                        <li class="list-group-item">
-                            <h4>Supermercado Santana</h4>
-                        </li>
-                        <li class="list-group-item">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-xs-12">
-                <div class="card text-xs-center">
-                    <ul class="list-group list-group-flush">
-
-                        <h3 class="card-title">287</h3>
-
-                        <li class="list-group-item">
-                            <h4>Supermercado Santana</h4>
-                        </li>
-                        <li class="list-group-item">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-xs-12">
-                <div class="card text-xs-center">
-                    <ul class="list-group list-group-flush">
-
-                        <h3 class="card-title">287</h3>
-
-                        <li class="list-group-item">
-                            <h4>Supermercado Santana</h4>
-                        </li>
-                        <li class="list-group-item">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-xs-12">
-                <div class="card text-xs-center">
-                    <ul class="list-group list-group-flush">
-
-                        <h3 class="card-title">287</h3>
-
-                        <li class="list-group-item">
-                            <h4>Supermercado Santana</h4>
-                        </li>
-                        <li class="list-group-item">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-xs-12">
-                <div class="card text-xs-center">
-                    <ul class="list-group list-group-flush">
-
-                        <h3 class="card-title">287</h3>
-
-                        <li class="list-group-item">
-                            <h4>Supermercado Santana</h4>
-                        </li>
-                        <li class="list-group-item">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-xs-12">
-                <div class="card text-xs-center">
-                    <ul class="list-group list-group-flush">
-
-                        <h3 class="card-title">287</h3>
-
-                        <li class="list-group-item">
-                            <h4>Supermercado Santana</h4>
-                        </li>
-                        <li class="list-group-item">
-                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        <li class="list-group-item" style="height: 170px;">
+                            {{ os.problemadescrito | limitTo: 80 }}{{os.problemadescrito.length > 80 ? '...' : ''}}
                         </li>
                     </ul>
                 </div>
@@ -196,6 +67,8 @@
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="js/app.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/controllers/estoqueServicesCtrl.js"></script>
 </body>
 </html>
